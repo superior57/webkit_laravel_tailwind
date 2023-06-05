@@ -1,0 +1,6 @@
+// Base
+@import '../base';
+
+.text-primary {
+  @apply font-sans text-72 font-bold text-main-primary-gamma;
+}

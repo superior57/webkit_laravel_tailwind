@@ -7,7 +7,7 @@
   
   <title>@yield('title')</title>
   
-  @vite('resources/scss/app.scss')
+  @vite('resources/scss/pages/auth.scss')
 </head>
 <body class="bg-gray-100">
   <div class="flex w-full">
