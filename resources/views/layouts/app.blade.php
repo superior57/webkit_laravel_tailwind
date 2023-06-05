@@ -7,7 +7,7 @@
   
   <title>@yield('title')</title>
   
-  @vite('resources/css/app.css')
+  @vite('resources/scss/app.scss')
 </head>
 <body class="bg-gray-100">
   @yield('content')  
