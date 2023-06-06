@@ -84,7 +84,7 @@ body {
 
   // Button Size
   .btn-small {
-    @apply h-40 w-85 rounded-50 px-16 py-8 flex justify-center items-center;
+    @apply h-40 rounded-50 px-16 py-8 flex justify-center items-center;
 
     &.rounded {
       @apply h-40 w-40 rounded-full;
