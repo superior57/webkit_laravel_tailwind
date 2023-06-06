@@ -4,5 +4,165 @@
 @tailwind utilities;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+html,
+body {
+  @apply font-sans text-f-dark bg-p-default-2;
+}
+
+@layer components {
+  // Typography
+  .title {
+    @apply font-sans font-bold text-72 leading-96 text-f-dark;
+  }
+
+  .title-2 {
+    @apply font-sans font-bold text-60 leading-80 text-f-dark;
+  }
+
+  .title-3 {
+    @apply font-sans font-bold text-48 leading-64 text-f-dark;
+  }
+
+  .title-4 {
+    @apply font-sans font-bold text-36 leading-48 text-f-dark;
+  }
+
+  .title-5 {
+    @apply font-sans font-bold text-30 leading-40 text-f-dark;
+  }
+
+  .title-6 {
+    @apply font-sans font-bold text-24 leading-32 text-f-dark;
+  }
+
+  .subtitle {
+    @apply font-inter font-semibold text-20 leading-28 text-f-dark;
+  }
+
+  .subtitle-2 {
+    @apply font-inter font-semibold text-18 leading-24 text-f-dark;
+  }
+
+  .text-body {
+    @apply font-inter font-normal text-16 leading-20 text-f-dark;
+  }
+
+  .text-body-2 {
+    @apply font-inter font-normal text-14 leading-20 text-f-dark;
+  }
+
+  .text-body-2 {
+    @apply font-inter font-normal text-14 leading-20 text-f-dark;
+  }
+
+  .text-button {
+    @apply font-sans font-bold text-16 leading-24 text-f-dark;
+  }
+
+  .text-button-2 {
+    @apply font-sans font-bold text-14 leading-20 text-f-dark;
+  }
+
+  .caption {
+    @apply font-inter font-normal text-12 leading-16 text-f-dark;
+  }
+
+  .caption-2 {
+    @apply font-inter font-medium text-12 leading-16 text-f-dark;
+  }
+
+  .overline {
+    @apply font-inter font-medium text-16 leading-20 uppercase tracking-2 text-f-dark;
+  }
+
+  .overline-1 {
+    @apply font-inter font-medium text-12 leading-16 uppercase tracking-2 text-f-dark;
+  }
+
+  // Button Size
+  .btn-small {
+    @apply h-40 w-85 rounded-50 px-16 py-8 flex justify-center items-center;
+
+    &.rounded {
+      @apply h-40 w-40 rounded-full;
+    }
+  }
+
+  .btn-medium {
+    @apply h-48 rounded-50 px-16 py-8 flex justify-center items-center;
+
+    &.rounded {
+      @apply h-48 w-48 rounded-full;
+    }
+  }
+
+  // Button Colors
+  .btn-primary {
+    @apply text-button text-p-gamma bg-main-primary hover:bg-main-primary-beta active:bg-main-primary-gamma;
+
+    &.btn-text {
+      @apply bg-transparent;
+    }
+  }
+
+  .btn-tertiary {
+    @apply text-button text-p-gamma bg-main-tertiary hover:bg-main-tertiary-beta active:bg-main-tertiary-gamma;
+  }
+
+  // Text Buttons
+  .btn-text {
+    @apply text-body-2 bg-transparent hover:underline;
+
+    &.btn-primary {
+      @apply text-main-primary;
+    }
+
+    &.btn-secondary {
+      @apply text-main-secondary;
+    }
+
+    &.btn-success {
+      @apply text-main-tertiary;
+    }
+
+    &.btn-error {
+      @apply text-main-error;
+    }
+
+    &.btn-text-medium {
+      @apply text-f-medium;
+    }
+  }
+
+  // Radio Button
+  .radio {
+    @apply cursor-pointer text-body;
+
+    & > input {
+      @apply hidden;
+
+      &:checked + label .active {
+        @apply block;
+      }
+    }
+
+    & label {
+      @apply flex items-center gap-20 cursor-pointer pl-20;
+
+      & .active {
+        @apply hidden w-8 h-8 bg-black border-black rounded-full;
+      }
+
+      & .option-outline {
+        @apply flex items-center justify-center bg-white border-2 border-black rounded-full cursor-pointer w-18 h-18;
+      }
+
+      & .option-label {
+        @apply py-14 flex-1;
+      }
+    }
+  }
+}
